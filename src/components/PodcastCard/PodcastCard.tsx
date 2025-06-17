@@ -13,7 +13,7 @@ const PodcastCard: React.FC<PodcastCardProps> = ({ title, episodeIdentifier, ima
         Listen now
       </a>
     </div>
-  )
+  );
 }
 
 export default PodcastCard;

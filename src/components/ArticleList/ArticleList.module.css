@@ -1,0 +1,19 @@
+.articleList {
+    padding: 40px 20px;
+    max-width: 1062px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 32px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: 14px;
+}
