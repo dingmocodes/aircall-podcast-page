@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './Header.module.css';
 
-function HeaderTopRow() {
+const HeaderTopRow: React.FC = () => {
   return (
     <div className={styles.topRow}>
       <span className={styles.phone}>+1 888 240 6923</span>
@@ -17,7 +17,7 @@ function HeaderTopRow() {
   );
 }
 
-function HeaderMiddleRow() {
+const HeaderMiddleRow: React.FC = () => {
   return (
     <div className={styles.midRow}>
       <div className={styles.logo}>
@@ -37,7 +37,7 @@ function HeaderMiddleRow() {
   );
 }
 
-function HeaderBottomRow() {
+const HeaderBottomRow: React.FC = () => {
   return (
     <div className={styles.bottomRow}>
       <nav className={styles.bottomNav}>
@@ -56,7 +56,7 @@ function HeaderBottomRow() {
   );
 }
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <HeaderTopRow />
@@ -65,3 +65,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;
