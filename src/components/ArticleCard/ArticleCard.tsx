@@ -7,9 +7,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ image, category, length, titl
     <div className={styles.card}>
       <img src={image} className={styles.cover}></img>
       <span>
-        <p className={styles.category}>{category} </p>
-        ·
-        <p className={styles.length}> {length} MIN READ</p>
+        <p className={styles.category}>{category} | </p>
+        <p className={styles.length}>{length} MIN READ</p>
       </span>
       <h4>{title}</h4>
       <p>{description}</p>
