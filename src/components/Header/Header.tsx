@@ -21,8 +21,8 @@ function HeaderMiddleRow() {
   return (
     <div className={styles.midRow}>
       <div className={styles.logo}>
-        <img src="public/logo.svg"></img>
-        <span className={styles.logoText}>Aircall</span>
+        <img src="/logo.svg"></img>
+        <span className={styles.logoText}>aircall</span>
       </div>
       <nav className={styles.midNav}>
         <a href="#">Why Aircall</a>
@@ -50,7 +50,7 @@ function HeaderBottomRow() {
         <a href="#">More</a>
       </nav>
       <button type="submit" className={styles.search}>
-        <img src="public/search.svg"></img>
+        <img src="/search.svg"></img>
       </button>
     </div>
   );
@@ -58,7 +58,7 @@ function HeaderBottomRow() {
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <HeaderTopRow />
       <HeaderMiddleRow />
       <HeaderBottomRow />
