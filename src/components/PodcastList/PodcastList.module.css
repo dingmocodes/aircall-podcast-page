@@ -14,9 +14,17 @@
     color: #222;
 }
 
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
 .sort {
-    float: right;
-    margin-top: -56px;
     padding: 8px 16px;
     border-radius: 8px;
     background: #f1f3f8;
@@ -31,4 +39,28 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .heading {
+        font-size: 22px;
+        width: 100%;
+    }
+
+    .sort {
+        width: 100%;
+        min-width: 0;
+    }
 }

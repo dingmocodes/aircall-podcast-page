@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 const FooterTopRow: React.FC = () => {
   return (
     <div className={styles.topRow}>
-      <img src="/logo.svg"></img>
+      <img src="/logo.svg" alt="Aircall logo"></img>
       <h2>The phone system for the modern business</h2>
     </div>
   );
@@ -78,13 +78,13 @@ const FooterBottomRow: React.FC = () => {
       </nav>
       <nav className={styles.footerSocials}>
         <a href="#" aria-label="Twitter">
-          <img src="/icon_twitter.svg"></img>
+          <img src="/icon_twitter.svg" alt="Twitter logo"></img>
         </a>
         <a href="#" aria-label="Facebook">
-          <img src="/icon_facebook.svg"></img>
+          <img src="/icon_facebook.svg" alt="Facebook logo"></img>
         </a>
         <a href="#" aria-label="Linkedin">
-          <img src="/icon_linkedin.svg"></img>
+          <img src="/icon_linkedin.svg" alt="Linkedin logo"></img>
         </a>
       </nav>
     </div>

@@ -21,9 +21,13 @@ const PODCASTS = [
 const PodcastList: React.FC = () => {
   return (
     <section className={styles.podcastList}>
-      <div>
+      <div className={styles.top}>
         <h2 className={styles.heading}>The latest releases</h2>
-        <select className={styles.sort} defaultValue="">
+        <select 
+          className={styles.sort}
+          defaultValue=""
+          aria-label="Sort podcasts"
+        >
           <option value="" disabled hidden>Sort by</option>
           <option value="new">Newest to oldest</option>
           <option value="old">Oldest to newest</option>
@@ -31,20 +35,21 @@ const PodcastList: React.FC = () => {
           <option value="long">Longest to shortest</option>
         </select>
       </div>
-      <div className={styles.grid}>
+      <ul className={styles.grid} role="list">
         {PODCASTS.slice(0, 4).map((podcast, idx) => (
-          <PodcastCard
-            key={idx}
-            title={podcast.title}
-            episodeIdentifier={podcast.episodeIdentifier}
-            image={podcast.image}
-            duration={podcast.duration}
-          />
+          <li key={idx} role="listitem">
+            <PodcastCard
+              title={podcast.title}
+              episodeIdentifier={podcast.episodeIdentifier}
+              image={podcast.image}
+              duration={podcast.duration}
+            />
+          </li>
         ))}
         {Array.from({ length: 4 - PODCASTS.length }).map((_, idx) => (
           <PlaceholderCard key={idx}/>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

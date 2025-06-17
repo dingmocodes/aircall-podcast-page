@@ -13,20 +13,20 @@ const HeroSection: React.FC = () => {
         </p>
         <div className={styles.platforms}>
           <a href="#">
-            <img src="/spotify.svg"></img>
+            <img src="/spotify.svg" alt="Spotify logo"></img>
             Spotify
           </a>
           <a href="#">
-            <img src="/deezer.svg"></img>
+            <img src="/deezer.svg" alt="Deezer logo"></img>
             Deezer
           </a>
           <a href="#">
-            <img src="/apple_podcast.svg"></img>
+            <img src="/apple_podcast.svg" alt="Apple Podcast logo"></img>
             Apple Podcast
           </a>
         </div>
       </div>
-      <img src="/smiles_convo.png"></img>
+      <img src="/smiles_convo.png" alt="Half faces smiling"></img>
     </section>
   );
 }

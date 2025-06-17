@@ -5,7 +5,7 @@ import { ArticleCardProps } from "./ArticleCard.types";
 const ArticleCard: React.FC<ArticleCardProps> = ({ image, category, length, title, description }) => {
   return (
     <div className={styles.card}>
-      <img src={image} className={styles.cover}></img>
+      <img src={image} className={styles.cover} alt="Abstract illustration of people"></img>
       <span>
         <p className={styles.category}>{category} | </p>
         <p className={styles.length}>{length} MIN READ</p>

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from './Header.module.css';
 
 const HeaderTopRow: React.FC = () => {
@@ -18,10 +19,11 @@ const HeaderTopRow: React.FC = () => {
 }
 
 const HeaderMiddleRow: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={styles.midRow}>
       <div className={styles.logo}>
-        <img src="/logo.svg"></img>
+        <img src="/logo.svg" alt="Aircall logo"></img>
         <span className={styles.logoText}>aircall</span>
       </div>
       <nav className={styles.midNav}>
@@ -32,6 +34,14 @@ const HeaderMiddleRow: React.FC = () => {
         <a href="#">Partners</a>
         <a href="#">Company</a>
       </nav>
+      <button 
+        className={styles.hamburger}
+        aria-label="Toggle navigation menu"
+        aria-expanded={isOpen}
+        onClick={() => setIsOpen(prev => !prev)}
+      >
+        <img src="/hamburger.svg" alt="Open navigation menu"></img>
+      </button>
       <button className={styles.tryForFree}>Try for Free</button>
     </div>
   );
@@ -49,8 +59,9 @@ const HeaderBottomRow: React.FC = () => {
         <a href="#">Podcast</a>
         <a href="#">More</a>
       </nav>
+      <span className={styles.searchText}>Search</span>
       <button type="submit" className={styles.search}>
-        <img src="/search.svg"></img>
+        <img src="/search.svg" alt="Search icon"></img>
       </button>
     </div>
   );

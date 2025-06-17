@@ -37,18 +37,19 @@ const ArticleList: React.FC = () => {
   return (
     <section className={styles.articleList}>
       <h2 className={styles.heading}>Discover our latest articles</h2>
-      <div className={styles.grid}>
+      <ul className={styles.grid} role="list">
         {ARTICLES.map((article, idx) => (
-          <ArticleCard 
-            key={idx}
-            image={article.image}
-            category={article.category}
-            length={article.length}
-            title={article.title}
-            description={article.description}
-          />
+          <li key={idx} role="listitem">
+            <ArticleCard 
+              image={article.image}
+              category={article.category}
+              length={article.length}
+              title={article.title}
+              description={article.description}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
